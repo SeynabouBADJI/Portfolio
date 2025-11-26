@@ -45,7 +45,7 @@ export default function Contact() {
 
         {/* LinkedIn */}
         <a 
-          href="https://www.linkedin.com/in/zeynabbadji" 
+          href="https://www.linkedin.com/in/Zeynab Badji" 
           target="_blank" 
           rel="noopener noreferrer"
           style={{
