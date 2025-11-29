@@ -1,3 +1,5 @@
+import "../styles/Projects.css";
+
 export default function Projects() {
   const projects = [
     {
@@ -18,49 +20,18 @@ export default function Projects() {
   ];
 
   return (
-    <section 
-      id="projects" 
-      style={{
-        padding: "100px 20px",
-        maxWidth: "900px",
-        margin: "auto",
-        color: "#ffffff",
-        textAlign: "center"
-      }}
-    >
-      <h2 style={{ fontSize: "2.5rem", marginBottom: "50px", color: "#f5deb3" }}>
-        Projets
-      </h2>
+    <section id="projects" className="projects">
+      <h2 className="projects-title">Projets</h2>
 
-      <div 
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "25px"
-        }}
-      >
+      <div className="projects-grid">
         {projects.map((project, i) => (
           <div 
-            key={i}
-            style={{
-              backgroundColor: "#6b3e3e",
-              padding: "20px",
-              borderRadius: "12px",
-              transition: "transform 0.3s, background-color 0.3s",
-              cursor: "pointer"
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = "scale(1.05)";
-              e.currentTarget.style.backgroundColor = "#8b5e5e";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.backgroundColor = "#6b3e3e";
-            }}
+            key={i} 
+            className="project-card"
             onClick={() => window.open(project.link, "_blank")}
           >
-            <h3 style={{ marginBottom: "15px", color: "#f5deb3" }}>{project.title}</h3>
-            <p style={{ lineHeight: "1.6" }}>{project.description}</p>
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-desc">{project.description}</p>
           </div>
         ))}
       </div>

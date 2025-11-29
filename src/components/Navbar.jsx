@@ -1,27 +1,41 @@
+import { useState } from "react";
+import "../styles/Navbar.css";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav style={{ 
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100%",
-      backgroundColor: "rgba(75, 46, 46, 0.9)", // marron foncé transparent
-      padding: "15px 40px",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      zIndex: 100
-    }}>
-      <h1 >
-        Zeynab<span style={{color:"#f5deb3"}}>Dev</span>
+    <nav className="navbar">
+
+      {/* LOGO */}
+      <h1 className="logo">
+        Zeynab<span>Dev</span>
       </h1>
-      <ul style={{ display: "flex", gap: "25px", listStyle: "none" }}>
+
+      {/* MENU DESKTOP */}
+      <ul className="nav-links">
         <li><a href="#hero">Accueil</a></li>
-        <li><a href="#about" >À propos</a></li>
-        <li><a href="#skills" >Compétences</a></li>
-        <li><a href="#projects" >Projets</a></li>
-        <li><a href="#contact" >Contact</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+
+      {/* BURGER BUTTON */}
+      <div className={`burger ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* MENU MOBILE */}
+      <div className={`mobile-menu ${open ? "mobile-open" : ""}`}>
+        <a href="#hero" onClick={() => setOpen(false)}>Accueil</a>
+        <a href="#about" onClick={() => setOpen(false)}>À propos</a>
+        <a href="#skills" onClick={() => setOpen(false)}>Compétences</a>
+        <a href="#projects" onClick={() => setOpen(false)}>Projets</a>
+        <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+      </div>
     </nav>
   );
 }

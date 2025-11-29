@@ -1,0 +1,119 @@
+/* ----- NAVBAR GLOBAL ----- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(75, 46, 46, 0.95); /* marron foncé */
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+  backdrop-filter: blur(5px);
+}
+
+/* ----- LOGO ----- */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: #f5deb3; /* beige */
+}
+
+/* ----- NAV LINKS DESKTOP ----- */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER SANS TRAIT */
+.nav-links a:hover {
+  color: #f5deb3;
+}
+
+/* ----- BURGER MENU ----- */
+.burger {
+  width: 30px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 100%;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Animation du burger */
+.burger.open div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ----- MOBILE MENU ----- */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 70%;
+  background: #4b2e2e;
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: 0.4s ease;
+  z-index: 150;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: #f5deb3;
+}
+
+/* OUVERTURE DU MENU MOBILE */
+.mobile-open {
+  right: 0;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
