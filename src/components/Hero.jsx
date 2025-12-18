@@ -2,28 +2,37 @@ import "../styles/Hero.css";
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className="hero-section">
+      <div className="hero-content">
+        {/* IMAGE */}
+        <img
+          src="/ph.jpg"
+          alt="Seynabou Badji"
+          className="hero-img"
+        />
 
-      <img 
-        src="/ph.jpg" 
-        alt="Zeynab Badji" 
-        className="hero-img"
-      />
+        {/* TEXTE */}
+        <div className="hero-text-content">
+          <h1 className="hero-title">
+            Bonjour, je suis <span>Seynabou Badji</span>
+          </h1>
 
-      <h1 className="hero-title">
-        Salut, je suis <span>Seynabou Badji</span>
-      </h1>
+          <h2 className="hero-subtitle">
+            Développeuse Web & Data Enthusiast
+          </h2>
 
-      <p className="hero-text">
-        Passionnée par le développement web et l’univers des données, 
-        je conçois des interfaces modernes, fluides et intuitives.
-        Mon objectif : transformer les idées en expériences visuelles élégantes.
-      </p>
+          <p className="hero-text">
+            Je conçois des applications web modernes, performantes et sécurisées,
+            avec une attention particulière portée à l’expérience utilisateur
+            et à la valorisation des données.
+          </p>
 
-      <a href="#projects" className="hero-btn">
-        Voir mes projets
-      </a>
-
+          {/* BOUTON */}
+          <a href="#projects" className="hero-btn primary">
+            Voir mes projets
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

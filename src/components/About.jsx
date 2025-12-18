@@ -2,12 +2,10 @@ import "../styles/About.css";
 
 export default function About() {
   return (
-    <section id="about" className="about">
-
+    <section id="about" className="about-section">
       <h2 className="about-title">Qui suis-je ?</h2>
 
       <div className="about-content">
-
         {/* PHOTO */}
         <div className="about-photo">
           <img src="od.jpeg" alt="Seynabou Badji" />
@@ -15,34 +13,46 @@ export default function About() {
 
         {/* TEXTE */}
         <div className="about-text">
-          <p>
-            Développeuse web passionnée et fascinée par le monde des données, 
-            je transforme les idées en expériences numériques élégantes et intuitives.  
-            Chaque projet est pour moi l’occasion de marier esthétique, fluidité et fonctionnalité.
+          <p className="about-intro">
+            Développeuse web passionnée et fascinée par le monde des données,
+            je conçois des expériences numériques <strong>élégantes</strong>,
+            <strong> intuitives</strong> et <strong>performantes</strong>.
           </p>
 
           <p>
-            Mon parcours académique a débuté avec un <strong>Baccalauréat S2</strong>, suivi d'une 
-            <strong> Licence en Ingénierie Informatique</strong> à l’Université Assane Seck de Ziguinchor.  
-            Aujourd’hui, je poursuis un <strong>Master 2 en Systèmes d’Information Répartis</strong> 
-            à l’Université Cheikh Anta Diop de Dakar.
+            Mon parcours académique débute avec un <strong>Baccalauréat S2</strong>,
+            suivi d’une <strong>Licence en Ingénierie Informatique</strong> à
+            l’Université Assane Seck de Ziguinchor.
+            Je poursuis actuellement un{" "}
+            <strong>Master 2 en Systèmes d’Information Répartis</strong> à
+            l’Université Cheikh Anta Diop de Dakar.
           </p>
 
           <p>
-            Pour renforcer mes compétences en sécurité et en protection des systèmes d’information, 
-            j’ai suivi une formation spécialisée en <strong>cybersécurité avec Force N</strong>.  
-            Cette expérience m’a permis de maîtriser les bonnes pratiques de sécurisation des applications, 
-            la gestion des risques et la prévention des vulnérabilités.
+            Soucieuse de la sécurité des systèmes d’information, j’ai renforcé mes
+            compétences à travers une formation spécialisée en{" "}
+            <strong>cybersécurité avec Force N</strong>.
+            Cette expérience m’a permis d’acquérir de solides bases en
+            sécurisation des applications, gestion des risques et prévention des
+            vulnérabilités.
           </p>
 
-          <p>
-            Mon objectif est de créer des interfaces performantes, intuitives et sécurisées, 
-            où l’expérience utilisateur et la protection des données vont de pair.
+          <p className="about-goal">
+            Mon ambition est de créer des solutions numériques où
+            <strong> l’expérience utilisateur</strong> et
+            <strong> la protection des données</strong> évoluent ensemble.
           </p>
+
+          {/* BOUTON CV */}
+          <a
+            href="/cv-seynabou-badji.pdf"
+            download
+            className="cv-button"
+          >
+            Télécharger mon CV
+          </a>
         </div>
-
       </div>
-
     </section>
   );
 }
